@@ -1,57 +1,470 @@
-/* Custom Stylesheet */
-/**
- * Use this file to override Materialize files so you can update
- * the core Materialize files in the future
- *
- * Made By MaterializeCSS.com
- */
 
-nav ul a,
-nav .brand-logo {
-  color: #444;
+
+/* Деф настройки */
+:root {
+	--hue: 223;
+	--bg: hsl(var(--hue), 10%, 90%);
+	--fg: hsl(var(--hue), 10%, 10%);
+	/*font-size: calc(16px + (24 - 16) * (100vw - 320px) / (1920 - 320));*/
+} 
+
+@font-face{
+
+font-family: 'druk';
+
+font-style: normal;
+font-weight: bold;
+src: local('Druk'),
+url("../fonts/druk.woff") format('woff');
+
 }
 
-p {
-  line-height: 2rem;
+
+
+html {
+cursor: none;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: AvenirNext, "druk",Avenir, -apple-system, BlinkMacSystemFont,
+    "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun,
+    sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+  vertical-align: baseline;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+  line-height: 1.7;
 }
 
-.sidenav-trigger {
-  color: #26a69a;
-}
-
-.parallax-container {
-  min-height: 380px;
-  line-height: 0;
-  height: auto;
-  color: rgba(255,255,255,.9);
-}
-  .parallax-container .section {
-    width: 100%;
-  }
-
-@media only screen and (max-width : 992px) {
-  .parallax-container .section {
-    position: absolute;
-    top: 40%;
-  }
-  #index-banner .section {
-    top: 10%;
-  }
-}
-
-@media only screen and (max-width : 600px) {
-  #index-banner .section {
-    top: 0;
-  }
-}
-
-.icon-block {
-  padding: 0 15px;
-}
-.icon-block .material-icons {
-  font-size: inherit;
-}
-
-footer.page-footer {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+	color:white;
+  text-decoration: none;
+  cursor:none;
+  transition: color .3s;
+}
+a:hover {
+	  text-decoration: none;
+  cursor:none;
+  	color:#D42635;
+}
+
+
+
+.fullscreen {
+	overflow:hidden;
+
+}
+
+/* LOADER */
+
+#loader {
+  position: absolute;
+  z-index:9999;
+  width: 100%;
+  height: 100%;
+  background:#0A0A0B;
+  animation: spin 2s linear infinite;
+}
+.centerloader {
+	  position: fixed;
+    top: 50%;
+    left: 50%;
+ transform: translate(-50%, -50%);
+
+	
+}
+
+
+.pl,
+.pl__worm {
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+}
+.pl {
+	animation-name: bump;
+	animation-timing-function: linear;
+	width: 8em;
+	height: 8em;
+}
+.pl__ring {
+	stroke: hsla(var(--hue), 10%, 10%, 0.1);
+	transition: stroke 0.3s;
+}
+.pl__worm {
+	animation-name: worm;
+	animation-timing-function: cubic-bezier(0.42, 0.17, 0.75, 0.83);
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg: hsl(var(--hue), 10%, 10%);
+		--fg: hsl(var(--hue), 10%, 90%);
+	}
+	.pl__ring {
+		stroke: hsla(var(--hue), 10%, 90%, 0.1);
+	}
+}
+
+/* Animations */
+@keyframes bump {
+	from,
+	42%,
+	46%,
+	51%,
+	55%,
+	59%,
+	63%,
+	67%,
+	71%,
+	74%,
+	78%,
+	81%,
+	85%,
+	88%,
+	92%,
+	to {
+		transform: translate(0, 0);
+	}
+	44% {
+		transform: translate(1.33%, 6.75%);
+	}
+	53% {
+		transform: translate(-16.67%, -0.54%);
+	}
+	61% {
+		transform: translate(3.66%, -2.46%);
+	}
+	69% {
+		transform: translate(-0.59%, 15.27%);
+	}
+	76% {
+		transform: translate(-1.92%, -4.68%);
+	}
+	83% {
+		transform: translate(9.38%, 0.96%);
+	}
+	90% {
+		transform: translate(-4.55%, 1.98%);
+	}
+}
+@keyframes worm {
+	from {
+		stroke-dashoffset: 10;
+	}
+	25% {
+		stroke-dashoffset: 295;
+	}
+	to {
+		stroke-dashoffset: 1165;
+	}
+}
+
+
+
+
+/* IMG */
+
+.card-img-top {
+	border-radius:12px;
+}
+
+.avatar {
+	
+	background-image: url("../img/BS.jpg");
+	padding-bottom:15px;
+	border-radius:50%;
+	width:200px;
+	height:200px;
+	margin:0 auto;
+	background-size: contain;
+	filter: drop-shadow (0 5 5px black);
+transition: transform .3s;	
+}
+.avatar:hover {
+	transform: scale(1.1);
+	
+}
+
+.rocket {
+	margin:50px;
+	width:50px;
+	height:50px;
+	opacity:1;
+transition: transform .3s;
+animation: 1s rocketin;
+	
+}
+
+.rocket:hover {
+	
+	  transform: rotate(45deg);
+	
+}
+
+@keyframes rocketin {
+  from {
+    margin-left: 100%;
+  
+  }
+
+  to {
+    margin-left: 0%;
+  
+  }
+}
+
+.rocket:hover .rocketcolor {
+	fill:#D42635;
+}
+.rocketcolor {
+	transition:.3s;
+}
+.textc {
+	opacity:.1;
+}
+
+.accordion-button {
+
+background-color:#0A0A0B;
+color:white;
+
+}
+/*
+.accordion-button::after {
+	background-image: ;
+}*/
+/* Cursor  настройки 2*/
+
+
+
+html, 
+html *, 
+body, 
+body * {
+  cursor: none;
+}
+.cursor-dot,
+.cursor-dot-outline {
+  mix-blend-mode: difference;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  opacity: 0;
+  position: fixed;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: opacity 0.29s ease-in-out, -webkit-transform 0.29s ease-in-out;
+  transition: opacity 0.29s ease-in-out, -webkit-transform 0.29s ease-in-out;
+  transition: opacity 0.29s ease-in-out, transform 0.29s ease-in-out;
+  transition: opacity 0.29s ease-in-out, transform 0.29s ease-in-out, -webkit-transform 0.29s ease-in-out;
+}
+
+.cursor-dot {
+  z-index:99999999;
+  width: 8.0px;
+  height: 8.0px;
+  background-color: rgba(212, 38, 53, 0.72);
+  border: solid;
+  border-radius: 50%;
+  border-width: 0px;
+  border-color: #000000;
+}
+
+.cursor-dot-outline {
+  z-index:99999998;
+  width: 36px;
+  height: 36px;
+  background-color: rgba(212, 38, 53, 0.2);
+  border: solid;
+  border-radius: 50%;
+  border-width: 0px;
+  border-color: #ffffff;
+}
+
+
+/* Cursor  настройки*/
+.title {
+	
+	font-family: 'druk', sans-serif;
+    letter-spacing: 10px;
+  line-height: 1;
+  font-size: 96px;
+  text-align:center;
+font-weight: bold;
+  
+}
+
+.subtitle {
+  margin: 100px 0;
+  font-size: 24px;
+}
+
+.hint {
+  margin: 50px 0;
+  font-size: 16px;
+}
+
+span {
+  color: #fefefe;
+  cursor: none;
+}
+
+.react2 {
+	transition: color .3s
+}
+.react2:hover {
+	color:#D42635;
+  
+ 
+
+}
+
+
+/* Шум БГ */
+
+@keyframes animateGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+body {
+  background-color: #0A0A0B;
+  color: white;
+}
+body:after {
+  animation: noise 6s steps(10) infinite;
+  background-image: url("../img/ax4UqqW.png");
+  background-repeat: repeat;
+  content: "";
+  height: 300%;
+  left: -100%;
+  opacity: 0.02;
+  pointer-events: none;
+  position: fixed;
+  top: -100%;
+  transition: opacity 0.4s ease;
+  width: 300%;
+  will-change: transform;
+  z-index: 3;
+}
+
+@keyframes noise {
+  0% {
+    transform: translate(20%, -15%);
+  }
+  10% {
+    transform: translate(-20%, -15%);
+  }
+  20% {
+    transform: translate(20%, -5%);
+  }
+  30% {
+    transform: translate(-20%, -5%);
+  }
+  40% {
+    transform: translate(20%, 5%);
+  }
+  50% {
+    transform: translate(-20%, 5%);
+  }
+  60% {
+    transform: translate(20%, 15%);
+  }
+  70% {
+    transform: translate(-20%, 15%);
+  }
+  80% {
+    transform: translate(20%, 5%);
+  }
+  90% {
+    transform: translate(-20%, 5%);
+  }
+  100% {
+    transform: translate(20%, -5%);
+  }
+}
+.content {
+	
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+
+}
+/* Кастом */
+
+.bunker-links {
+	  letter-spacing: 10px;
+	transition: color .2s;
+}
+
+.bunker-links:hover  {
+	color:#D42635;
+}
+b {
+	font-weight:700;
+}
+.dev{
+	
+	color:#D42635;
+}
+
+/* Попап */
+
+.popup {
+	background: rgba(0, 0, 0, 0.6);
+	position: fixed;
+	display: none;
+	z-index: 800;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
+}
+	.popup .wrapper {
+		max-width: 600px; 
+		width: 70%; 
+		position: fixed;
+		transform: translate(-50%, -50%);
+  		left: 50%;
+	   top: 50%;
+		background: #030507;
+		padding: 30px;
+		border-radius: 10px;
+		box-shadow: 2px 2px 10px 0px rgba(#000000, 0.4);
+	}
+	
+/* Адапт */
+	
+	
+	@media (max-width: 768px) {
+  .vertical-center {
+
+	   margin-top:100%;
+
+
+   
+  }
 }

@@ -1,164 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Parallax Template - Materialize</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bunkerdev</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+	    
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+  
+ <div id="loader">
+ 
+ <div class = "centerloader">
+ <svg class="pl" viewBox="0 0 128 128" width="128px" height="128px" xmlns="http://www.w3.org/2000/svg">
+	<defs>
+		<linearGradient id="pl-grad" x1="0" y1="0" x2="0" y2="1">
+			<stop offset="0%" stop-color="hsl(355, 70%, 49%)" />
+			<stop offset="100%" stop-color="hsl(355, 82%, 34%)" />
+		</linearGradient>
+	</defs>
+	<circle class="pl__ring" r="56" cx="64" cy="64" fill="none" stroke="hsla(0,10%,10%,0.1)" stroke-width="16" stroke-linecap="round" />
+	<path class="pl__worm" d="M92,15.492S78.194,4.967,66.743,16.887c-17.231,17.938-28.26,96.974-28.26,96.974L119.85,59.892l-99-31.588,57.528,89.832L97.8,19.349,13.636,88.51l89.012,16.015S81.908,38.332,66.1,22.337C50.114,6.156,36,15.492,36,15.492a56,56,0,1,0,56,0Z" fill="none" stroke="url(#pl-grad)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="44 1111" stroke-dashoffset="10" />
+</svg>
+</div>
 
-  <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-</head>
-<body>
-  <nav class="white" role="navigation">
-    <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo">Logo</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#">Navbar Link</a></li>
-      </ul>
-
-      <ul id="nav-mobile" class="sidenav">
-        <li><a href="#">Navbar Link</a></li>
-      </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+</div>
+  
+<div class="container text-center align-self-center">
+  <div class="row">
+    <div class="col">
+   
     </div>
-  </nav>
+    <div class="col-9">
+	<div class="d-flex flex-column mb-3 position-absolute top-50 translate-middle-y vertical-center">
 
-  <div id="index-banner" class="parallax-container">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <br><br>
-        <h1 class="header center teal-text text-lighten-2">Parallax Template</h1>
-        <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-        </div>
-        <div class="row center">
-          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
-        </div>
-        <br><br>
-
-      </div>
-    </div>
-    <div class="parallax"><img src="background1.jpg" alt="Unsplashed background img 1"></div>
-  </div>
+    <div class="p-2 content">
+	<div class="avatar vertical-center align-middle"></div>
+	<div class="title"><b>BUNKER</b><b class="dev">DEV. </b> </div>
+</div>
 
 
-  <div class="container">
-    <div class="section">
 
-      <!--   Icon Section   -->
-      <div class="row">
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
-            <h5 class="center">Speeds up development</h5>
+ <div class="p-2 content align-self-center">
+<div class="d-flex flex-row mb-3">
+ <div class="p-2 content">
+	<span class="bunker-links ">
+	<a href="https://discord.gg/cxk88497Pm" target="_blank">
+[
+discord
+]
+</a>
+</span>
+</div>
 
-            <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
-          </div>
-        </div>
+ <div class="p-2 content">
+	<span class="bunker-links ">
+	<a class="openMyPopup" data-popup="myPopup">
+[
+about	
+]
+</a>
+</span>
+</div>
 
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">group</i></h2>
-            <h5 class="center">User Experience Focused</h5>
-
-            <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
-            <h5 class="center">Easy to work with</h5>
-
-            <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
-          </div>
-        </div>
-      </div>
+ <div class="p-2 content">
+	<span class="bunker-links ">
+	<a class="openMyPopup" data-popup="myPopup2">
+[
+links	
+]
+</a>
+</span>
+</div>
+</div>
+</div>
+  
+  
+  
+</div>
+   <div class="textc position-absolute bottom-0 start-50 translate-middle-y ">
+   © 2022
+</div>
 
     </div>
-  </div>
+    <div class="col">
+	   <div class=" position-absolute bottom-0 end-0 ">
+    <svg class="rocket" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M293.725 479.614C294.328 494.146 276.709 501.826 266.318 491.511L215.419 440.612C186.13 411.323 170.77 372.396 170.619 333.017C209.848 363.36 252.539 391.596 291.09 412.377L293.725 479.614Z" fill="white" class="rocketcolor"/>
+<path d="M480.229 293.111L412.99 290.476C392.21 251.85 363.975 209.233 333.631 170.005C372.934 170.156 411.861 185.365 441.226 214.73L492.2 265.704C502.516 276.02 494.761 293.638 480.229 293.111Z" fill="white" class="rocketcolor"/>
+<path d="M258.864 106.984C317.067 165.186 383.852 258.325 415.852 330.381C419.843 339.492 417.81 350.109 410.732 357.186L357.801 410.118C350.723 417.196 340.107 419.229 330.996 415.238C258.939 383.238 165.801 316.377 107.598 258.25C78.9866 229.563 57.3771 193.421 42.1677 154.118L154.732 41.6285C190.723 55.4074 227.994 76.1132 258.864 106.984V106.984ZM132.972 205.92C153.678 226.626 187.034 225.421 206.535 205.92C226.864 185.591 226.864 152.688 206.535 132.358C186.205 112.028 153.302 112.029 132.972 132.358C112.718 152.612 112.643 185.592 132.972 205.92V205.92Z" fill="white" class="rocketcolor"/>
+<path d="M32.8147 14.5001C55.2297 16.2394 95.3766 21.2916 139.077 35.9589L115.887 59.1495C113.188 61.848 34.3484 140.688 36.5944 138.442C21.9121 94.7486 16.8674 54.6017 15.1281 32.1867C14.345 22.0815 22.7034 13.717 32.8147 14.5001V14.5001Z" fill="white" class="rocketcolor"/>
+<path d="M438.518 443.852L405.54 410.874C402.599 407.933 402.599 403.168 405.54 400.227C408.481 397.285 413.246 397.286 416.187 400.227L449.166 433.205C452.107 436.146 452.107 440.91 449.166 443.852C446.224 446.794 441.459 446.794 438.518 443.852V443.852Z" fill="white" class="rocketcolor"/>
+<path d="M447.364 389.238C450.305 386.297 455.069 386.297 458.011 389.238L493.136 424.356C496.077 427.293 496.077 432.062 493.136 435.003C490.195 437.944 485.43 437.944 482.488 435.003L447.364 399.886C444.422 396.948 444.422 392.179 447.364 389.238Z" fill="white" class="rocketcolor"/>
+<path d="M402.51 439.371L447.845 484.698C450.786 487.635 450.786 492.403 447.845 495.345C444.904 498.286 440.139 498.286 437.198 495.345L391.863 450.018C388.922 447.081 388.922 442.312 391.863 439.371C394.805 436.43 399.569 436.43 402.51 439.371V439.371Z" fill="white" class="rocketcolor"/>
+</svg>
 
-
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="background2.jpg" alt="Unsplashed background img 2"></div>
-  </div>
-
-  <div class="container">
-    <div class="section">
-
-      <div class="row">
-        <div class="col s12 center">
-          <h3><i class="mdi-content-send brown-text"></i></h3>
-          <h4>Contact Us</h4>
-          <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
-        </div>
-      </div>
+</div>
+   
 
     </div>
   </div>
+</div>
+<div class="popup" id="myPopup" data-popup="myPopup">
+
+	<div class="wrapper" >
+		<h2 id="popupTitle">About</h2>
+		<img src="img/BS.jpg" class="card-img-top">
+
+		<p id="popupText"> <br>Когда Сережа придумает суда текст, мы обязательно его добавим</p>
+
+		 <div class="p-2 content">
+	<span class="bunker-links ">
+	<a class="closePopup" data-popup="myPopup">
+[
+close
+]
+</a>
+</span>
+</div>
+</div>
+</div>
+<div class="popup" id="myPopup2">
+	<div class="wrapper" aria-labelledby="popupTitle" aria-describedby="popupText" aria-modal="true">
+		<h2 id="popupTitle">Links</h2>
+		Я ничего не придумал, пусть просто будет
+		<p  id="popupText">
 
 
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="background3.jpg" alt="Unsplashed background img 3"></div>
-  </div>
+</p>
 
-  <footer class="page-footer teal">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+		 <div class="p-2 content">
+	<span class="bunker-links ">
+	<a class="closePopup" data-popup="myPopup2">
+[
+close
+]
+</a>
+</span>
+</div>
+</div>
+</div>
 
 
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Settings</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
-      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
-      </div>
-    </div>
-  </footer>
 
 
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
 
+	<script src="js/jquery-3.6.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/popup.js"></script>
+		<script src="js/rocket.js"></script>
+	<script>
+	
   </body>
 </html>
