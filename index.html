@@ -82,7 +82,7 @@ links
   
 </div>
    <div class="textc position-absolute bottom-0 start-50 translate-middle-y ">
-   © 2022
+   © 2023
 </div>
 
     </div>
@@ -154,6 +154,8 @@ close
 	<script src="js/popup.js"></script>
 		<script src="js/rocket.js"></script>
 	<script>
-	
+		let nowYear = new Date().getUTCFullYear();
+		$('.textc').text(nowYear);
+		</script>
   </body>
 </html>
